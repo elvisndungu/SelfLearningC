@@ -8,14 +8,14 @@
 
 
 int main() {
-    char nickname[30];
+    
+    // initialize random
+    srand(time(NULL));  // Seed the random number generator
+    
+    int randNum = (rand()%50)+1;
     int guess;
     int userGuesses;
-
-    bool run = true;
-
-    srand(time(NULL));  // Seed the random number generator
-    int randNum = (rand()%50)+1;
+    char nickname[30];
 
     printf("Welcome to my first C game!!\n");
     printf("What should I call you?\n");
@@ -25,10 +25,12 @@ int main() {
     
     printf("Hello, %s!\n", nickname);
     printf("Lets play a guessing name;\n");
-    printf("You'll guess a number from 1-50/n");
+
+    printf("You'll guess a number from 1-50\n");
     printf("And I'll tell you if its too hot or cold\n");
     
-    while(run) {
+
+    while(true) {
 
         printf("Guess: ");
         scanf("%d", &guess);
@@ -41,12 +43,10 @@ int main() {
 
         } else {
             printf("Yesss\n");
-            run=false;
+            break;
 
-        }
-        
+        }    
     }
-
 
     return 0;
 }
