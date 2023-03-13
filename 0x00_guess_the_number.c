@@ -1,7 +1,7 @@
 // Guess the number v0x01 by Elvis
 
 #include <stdio.h>
-#include <stdlib.h>
+// #include <stdlib.h>
 #include <time.h>
 #include <stdbool.h>
 
